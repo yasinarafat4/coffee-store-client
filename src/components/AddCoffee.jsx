@@ -65,11 +65,11 @@ const AddCoffee = () => {
       <div className="bg-[#F4F3F0] p-24 md:mx-20 md:mb-20 shadow-lg">
         <h2
           style={{ fontFamily: "Rancho" }}
-          className="text-5xl font-extrabold text-center"
+          className="text-3xl md:text-5xl font-extrabold text-center mb-2"
         >
-          Add a Coffee
+          Add New Coffee
         </h2>
-        <p className="text-center m-5">
+        <p className="text-center md:m-5">
           Start your day off right with a freshly brewed cup of coffee, made
           just the way you like it. Discover our range of premium blends and
           savor the rich, bold flavors that will awaken your senses and energize

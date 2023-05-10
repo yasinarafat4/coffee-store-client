@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaEye, FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const CoffeeCard = ({ coffee }) => {
@@ -73,12 +74,14 @@ const CoffeeCard = ({ coffee }) => {
               >
                 <FaEye />
               </p>
-              <p
-                style={{ backgroundColor: "#3C393B" }}
-                className="p-2 text-white rounded mb-2"
-              >
-                <FaEdit />
-              </p>
+              <Link to={`/updateCoffee/${coffee._id}`}>
+                <p
+                  style={{ backgroundColor: "#3C393B" }}
+                  className="p-2 text-white rounded mb-2"
+                >
+                  <FaEdit />
+                </p>
+              </Link>
               <p
                 onClick={() => handleDelete(coffee._id)}
                 style={{ backgroundColor: " #EA4744" }}
