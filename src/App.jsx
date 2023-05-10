@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import "./App.css";
 import { FaCoffee } from "react-icons/fa";
 import CoffeeCard from "./components/CoffeeCard";
@@ -16,16 +16,18 @@ function App() {
         >
           Our Popular Products
         </h1>
-        <button
-          className="flex items-center justify-center border px-2 py-1 rounded gap-1 mt-3 text-lg text-white"
-          style={{
-            fontFamily: "Rancho",
-            backgroundColor: "#E3B577",
-            border: "2px solid black",
-          }}
-        >
-          Add Coffee <FaCoffee />
-        </button>
+        <Link to="/addCoffee">
+          <button
+            className="flex items-center justify-center border px-2 py-1 rounded gap-1 mt-3 text-lg text-white"
+            style={{
+              fontFamily: "Rancho",
+              backgroundColor: "#E3B577",
+              border: "2px solid black",
+            }}
+          >
+            Add Coffee <FaCoffee />
+          </button>
+        </Link>
       </div>
       <div className="m-20 grid md:grid-cols-2 gap-4">
         {allCoffee.map((coffee) => (

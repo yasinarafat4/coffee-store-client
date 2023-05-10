@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AddCoffee = () => {
   const handleAddCoffee = (event) => {
@@ -48,16 +49,18 @@ const AddCoffee = () => {
 
   return (
     <>
-      <div className=" m-10 flex items-center gap-1">
-        <FaArrowLeft />
-        <p
-          className="text-2xl font-semibold shadow-lg"
-          style={{ fontFamily: "Rancho" }}
-        >
-          {" "}
-          Back to Home
-        </p>
-      </div>
+      <Link to="/">
+        <div className=" m-10 flex items-center gap-1">
+          <FaArrowLeft />
+          <p
+            className="text-2xl font-semibold shadow-lg"
+            style={{ fontFamily: "Rancho" }}
+          >
+            {" "}
+            Back to Home
+          </p>
+        </div>
+      </Link>
 
       <div className="bg-[#F4F3F0] p-24 md:mx-20 md:mb-20 shadow-lg">
         <h2
