@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useLoaderData } from "react-router-dom";
+import "./App.css";
+import { FaCoffee } from "react-icons/fa";
+import CoffeeCard from "./components/CoffeeCard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const allCoffee = useLoaderData();
+  console.log(allCoffee);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <div className="flex flex-col items-center justify-center">
+        <p>--- Sip & Savor ---</p>
+        <h1
+          style={{ fontFamily: "Rancho" }}
+          className="text-5xl text-black text-center"
+        >
+          Our Popular Products
+        </h1>
+        <button
+          className="flex items-center justify-center border px-2 py-1 rounded gap-1 mt-3 text-lg text-white"
+          style={{
+            fontFamily: "Rancho",
+            backgroundColor: "#E3B577",
+            border: "2px solid black",
+          }}
+        >
+          Add Coffee <FaCoffee />
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="m-20 grid md:grid-cols-2 gap-4">
+        {allCoffee.map((coffee) => (
+          <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
+        ))}
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
