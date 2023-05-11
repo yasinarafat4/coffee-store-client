@@ -8,7 +8,7 @@ function App() {
   console.log(allCoffee);
   return (
     <>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center mt-10">
         <p>--- Sip & Savor ---</p>
         <h1
           style={{ fontFamily: "Rancho" }}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaEye, FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -70,7 +70,7 @@ const CoffeeCard = ({ coffee }) => {
             <div>
               <p
                 style={{ backgroundColor: "#D2B48C" }}
-                className="p-2 text-white rounded mb-2"
+                className="p-2 text-white rounded mb-2 cursor-pointer"
               >
                 <FaEye />
               </p>
@@ -85,7 +85,7 @@ const CoffeeCard = ({ coffee }) => {
               <p
                 onClick={() => handleDelete(coffee._id)}
                 style={{ backgroundColor: " #EA4744" }}
-                className="p-2 text-white rounded"
+                className="p-2 text-white rounded cursor-pointer"
               >
                 <MdDelete />
               </p>
